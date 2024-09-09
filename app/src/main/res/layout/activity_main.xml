@@ -3,14 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="Kalkulator"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/input1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="20dp"
         android:hint="Masukkan angka pertama"
         android:inputType="numberDecimal" />
 
@@ -18,19 +31,20 @@
         android:id="@+id/input2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukkan angka kedua"
-        android:inputType="numberDecimal"
         android:layout_below="@id/input1"
-        android:layout_marginTop="10dp"
-        android:layout_marginHorizontal="16dp" />
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:hint="Masukkan angka kedua"
+        android:inputType="numberDecimal" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/input2"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
 
         <RadioButton
             android:id="@+id/radioAdd"
@@ -61,9 +75,12 @@
         android:id="@+id/buttonCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hitung"
         android:layout_below="@id/radioGroup"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:background="?attr/colorPrimary"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Hitung"
+        android:textColor="#FFFFFF"/>
 
 </RelativeLayout>
